@@ -7,13 +7,14 @@
 
 ## 安装
 
-`pip install django-zqiniu`
+> `pip install django-zqiniu`
 
 
 ## 配置
 
 在`settings.py`中增加以下配置：
-```
+```python
+
 QINIU_SETTINGS = {
     'ACCESS_KEY': 'your access_key',
     'SECRET_KEY': 'your secret_key',
