@@ -1,4 +1,4 @@
-# django-qiniu
+# django-zqiniu
 
 在Django中集成七牛服务
 
