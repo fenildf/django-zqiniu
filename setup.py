@@ -3,7 +3,6 @@
 
 import io
 import os
-import re
 
 try:
     import setuptools
@@ -27,7 +26,7 @@ def read(*names, **kwargs):
 
 setup(
     name='django-zqiniu',
-    version='0.1',
+    version='0.1.1',
     description='在Django中集成七牛服务',
     long_description='这里完整实现了`django.core.files.storage.Storage`。在任何需要使用七牛服务的地方都可以使用本类。\n',
     author='hunter007',
