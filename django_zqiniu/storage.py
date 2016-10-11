@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 import os
+import uuid
 from six.moves.urllib.parse import urljoin
 from django.conf import settings
 from django.utils.deconstruct import deconstructible
@@ -78,7 +79,7 @@ class QiniuStorage(Storage):
         return ret['putTime']
 
     def save(self, name, content, max_length=None):
-        file_name = os.path.basename(name)
+        file_name = uuid.uuid1()
         token = self.__auth.upload_token(
             self.bucket_name, self.path(file_name), 3600)
         ret, info = put_data(token, self.path(file_name), content)
