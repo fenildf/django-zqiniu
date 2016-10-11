@@ -79,11 +79,12 @@ class QiniuStorage(Storage):
         return ret['putTime']
 
     def save(self, name, content, max_length=None):
-        file_name = str(uuid.uuid1())
+        file_name = str(uuid.uuid1()) + name.split('.')[-1]
         token = self.__auth.upload_token(
             self.bucket_name, self.path(file_name), 3600)
         ret, info = put_data(token, self.path(file_name), content)
-        return self.path(file_name)
+        # 数据库里不保存 prefix
+        return file_name
 
     def __eq__(self, other):
         return [
