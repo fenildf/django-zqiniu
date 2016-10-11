@@ -26,7 +26,7 @@ def read(*names, **kwargs):
 
 setup(
     name='django-zqiniu',
-    version='0.2',
+    version='0.6',
     description='在Django中集成七牛服务',
     long_description='这里完整实现了`django.core.files.storage.Storage`。在任何需要使用七牛服务的地方都可以使用本类。\n',
     author='hunter007',
@@ -41,9 +41,8 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.5',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development :: Libraries :: Python Modules'
     ],
